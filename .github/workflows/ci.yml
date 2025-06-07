@@ -10,3 +10,10 @@ jobs:
 
       - name: A comer!
         run: echo "A comer comida en ${{ github.workflow }} desde github ${{ github.event_name }} por ${{ github.actor }}!"
+
+      - name: Veamos mas comida
+        env:
+          JOB_CONTEXT: ${{ toJson(job) }}
+        run: |
+          echo "Job Context: $JOB_CONTEXT"
+          echo "Done!"
