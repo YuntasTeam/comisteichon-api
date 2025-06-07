@@ -9,7 +9,10 @@ jobs:
       - uses: actions/checkout@v1
 
       - name: A comer!
-        run: echo "A comer comida en ${{ github.workflow }} desde github ${{ github.event_name }} por ${{ github.actor }}!"
+        run: |
+          echo "A comer comida en ${{ github.workflow }}"
+          echo "desde github ${{ github.event_name }}"
+          echo "por ${{ github.actor }}!"
 
       - name: Veamos mas comida
         env:
