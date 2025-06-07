@@ -6,4 +6,4 @@ app = FastAPI()
 
 @app.get("/health", tags=["Healthcheck"])
 async def healthcheck():
-    return JSONResponse(status_code=200, content={"status": "ok"})
+    return JSONResponse(status_code=501, content={"status": "ok"})
