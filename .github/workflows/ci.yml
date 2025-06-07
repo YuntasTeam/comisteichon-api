@@ -1,0 +1,12 @@
+name: First Workflow
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: A comer!
+        run: echo "A comer comida en ${{ github.workflow }} desde github ${{ github.event_name }} por ${{ github.actor }}!"
